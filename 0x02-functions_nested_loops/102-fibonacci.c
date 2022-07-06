@@ -16,10 +16,6 @@ int main(void)
 	{
 		if (j != 20221990200)
 		{
-			printf("%ld\n", j);
-		}
-		else
-		{
 			printf("%ld, ", j);
 		}
 		else
