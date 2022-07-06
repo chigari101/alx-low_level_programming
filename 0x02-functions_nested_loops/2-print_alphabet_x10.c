@@ -7,7 +7,7 @@
 void print_alphabet_x10(void)
 {
 	char c, i;
-	:wq
+wq:
 		for (c = 'a'; c <= 'z'; c++)
 		{
 			for (i = 0; i <= 9; i++)
