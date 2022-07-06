@@ -14,7 +14,7 @@ int main(void)
 
 	for (i = 1; i <= 50; ++i)
 	{
-		if (j != 20221990200)
+		if (j != 4807526976)
 		{
 			printf("%ld, ", j);
 		}
