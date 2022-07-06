@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - function print
+ * main - function to print
  *
  * return: 0
  */
