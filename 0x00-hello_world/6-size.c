@@ -4,7 +4,8 @@
  *
  * Return: Always 0 (success)
  */
-int main(void){
+int main(void)
+{
 	int i;
 	long int l;
 	long long int ll;
