@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - function that prints the numbersfrom 1 to 100, followed by new line.
- * however for multiples of three points Fizz instead of the numbers.
+ * main - function that prints the numbers from 1 to 100, followed by new line.
+ * but for multiples of three points Fizz instead of the numbers.
  * and for the multiples of five prints Buzz
  * Return: always 0 (success)
  */
