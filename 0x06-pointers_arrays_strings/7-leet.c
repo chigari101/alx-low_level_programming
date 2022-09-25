@@ -4,22 +4,22 @@
  * leet - function that encodes a string into 1337.
  * @str: string to be encoded.
  *
- * Return: pointer to the encoded s
+ * Return: pointer to the encoded string.
  */
 char *leet(char *str)
 {
-	int index1 = 0, index2;
+	int indx1 = 0, indx2;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (str[index1])
+	while (str[indx1])
 	{
-		for (index2 = 0; index2 <= 7; index2++)
+		for (indx2 = 0; indx2 <= 7; indx2++)
 		{
-			if (str[index1] == leet[index2] ||
-					str[index1 - 32 == leet[index2])
-				str[index1] = index2 + '0';
+			if (str[indx1] == leet[indx2] ||
+					str[indx1 - 32 == leet[indx2])
+				str[indx1] = indx2 + '0';
 		}
-		index1++;
+		indx1++;
 	}
 	return (str);
 }
