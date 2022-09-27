@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * print_diagrums - function that prints the sum of the two diagonals of
