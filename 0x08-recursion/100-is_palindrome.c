@@ -12,6 +12,7 @@ int _strlen_recursion(char *s)
 	else
 		return (1 + _strlen_recursion(s + 1));
 }
+
 /**
  * comparator - compares characters of the string.
  * @s: string
@@ -29,6 +30,7 @@ int comparator(char *s, int num1, int num2)
 	}
 	return (0);
 }
+
 /**
  * is_palindrome - function that returns 1
  * if a string is a palindrome and 0 if not.
