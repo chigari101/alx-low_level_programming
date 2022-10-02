@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	amount = atoi(arfv[1]);
+	amount = atoi(argv[1]);
 
 	while (amount > 0)
 	{
