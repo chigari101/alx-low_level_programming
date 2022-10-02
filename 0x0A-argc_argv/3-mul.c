@@ -15,12 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
+		printf("Error\n");
 		return (1);
 	}
 
