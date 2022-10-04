@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 	}
 	for (j = k = l = 0; l < i; k++, l++)
 	{
-		if (av[j][k] =='\0')
+		if (av[j][k] == '\0')
 		{
 			atos[l] = '\n';
 			j++;
