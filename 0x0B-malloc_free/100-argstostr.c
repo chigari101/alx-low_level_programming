@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 		free(atos);
 		return (NULL);
 	}
-	for (j = k = l = 0; l < i; k++; l++)
+	for (j = k = l = 0; l < i; k++, l++)
 	{
 		if (av[j][k] =='\0')
 		{
