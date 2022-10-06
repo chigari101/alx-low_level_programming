@@ -30,15 +30,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (*s1)
 		{
-			p[i] = *s1;
+			ptr[i] = *s1;
 			s1++;
 		}
 		else
 		{
-			p[i] = *s2;
+			ptr[i] = *s2;
 			s2++;
 		}
 	}
-	p[i] = '\0';
+	ptr[i] = '\0';
 	return (ptr);
 }
