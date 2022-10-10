@@ -8,11 +8,7 @@
  */
 int main(void)
 {
-	int c;
-
-	c = __FILE__();
-	putchar(c);
-	c = __FILE__();
+	printf("%s\n", __FILE__);
 
 	return (0);
 }
