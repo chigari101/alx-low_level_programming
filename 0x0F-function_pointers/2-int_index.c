@@ -4,11 +4,8 @@
 /**
  * array_iterator - Executes a function as a parameter
  * on each element of an array
- * 
  * @array: An array of paramters (values) to be passed to @action
- * 
  * @size: Size/length of @array
- *
  * @action: Pointer to a function
  */
 
