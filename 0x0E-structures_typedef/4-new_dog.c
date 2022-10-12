@@ -1,82 +1,90 @@
 #include <stdlib.h>
 #include "dog.h"
 
+int _strLen(char *str);
+void fillMem(char *str, int strLen, char *dest);
+
 /**
- * _copy - Make a copy of passed in argument
- * @src: Data to make copy of
- * Return: Pointer
+ * new_dog - Creates a new dog
+ *
+ * @name: Name of dog
+ *
+ * @age: Age of dog
+ *
+ * @owner: Owner of dog
+ *
+ * Return: Pointer to the newly created dog (SUCCESS) or
+ * NULL if insufficient memory was available (FAILURE)
  */
 
-char *_copy(char *src)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *ptr;
-	int i, len;
+	dog_t *n_dog;
+	int nameLen, ownerLen;
 
-	if (src == NULL)
+	n_dog = malloc(sizeof(dog_t));
+
+	if (n_dog == NULL)
+		return (NULL);
+
+	nameLen = _strLen(name);
+	n_dog->name = malloc(sizeof(char) * nameLen + 1);
+
+	if (n_dog->name == NULL)
 	{
+		free(n_dog);
 		return (NULL);
 	}
 
-	for (len = 0; src[len] != '\0'; len++)
-		;
+	fillMem(name, nameLen, n_dog->name);
 
-	ptr = malloc(sizeof(char) * (len + 1));
+	ownerLen = _strLen(owner);
+	n_dog->owner = malloc(sizeof(char) * ownerLen + 1);
 
-	if (ptr == NULL)
+	if (n_dog->owner == NULL)
 	{
+		free(n_dog);
+		free(n_dog->name);
 		return (NULL);
 	}
+	fillMem(owner, ownerLen, n_dog->owner);
 
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		ptr[i] = src[i];
-	}
+	n_dog->age = age;
 
-	ptr[i] = '\0';
-	return (ptr);
+	return (n_dog);
 }
 
 /**
- * new_dog - Create a new dog variable
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
- * Return: Pointer to new dog variable
+ * _strLen - Get length of a string
+ *
+ * @str: A string
+ *
+ * Return: Length of string
  */
-dog_t *new_dog(char *name, float age, char *owner)
+int _strLen(char *str)
 {
-	dog_t *snoopie;
-	char *new_name, *new_owner;
+	int i = 0;
 
-	if (name == NULL || owner == NULL)
-	{
-		return (NULL);
-	}
+	while (str[i])
+		i++;
+	return (i);
+}
 
-	snoopie = malloc(sizeof(dog_t));
-	if (snoopie == NULL)
-	{
-		return (NULL);
-	}
+/**
+ * fillMem - Copy string literal to allocated memory
+ *
+ * @str: String literal
+ *
+ * @strLen: @str length
+ *
+ * @dest: The allocated memory
+ */
+void fillMem(char *str, int strLen, char *dest)
+{
+	int i;
 
-	new_name = _copy(name);
-	if (new_name == NULL)
-	{
-	free(snoopie);
-		return (NULL);
-	}
-	(*snoopie).name = new_name;
+	for (i = 0; i < strLen; i++)
+		dest[i] = str[i];
 
-	(*snoopie).age = age;
-
-	new_owner = _copy(owner);
-	if (new_owner == NULL)
-	{
-		free((*snoopie).name);
-		free(snoopie);
-		return (NULL);
-	}
-	(*snoopie).owner = new_owner;
-
-	return (snoopie);
+	dest[i] = '\0';
 }
