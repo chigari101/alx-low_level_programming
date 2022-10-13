@@ -1,14 +1,13 @@
-#include <stdio.h>
 #include "function_pointers.h"
 
 /**
- * array_iterator - Executes a function as a parameter
+ * int_index - Executes a function as a parameter
  * on each element of an array
  * @array: An array of paramters (values) to be passed to @action
  * @size: Size/length of @array
  * @action: Pointer to a function
  */
-void array_iterator(int *array, size_t size, void (*action)(int))
+int int_index(int *array, int size, int (*cmp)(int))
 {
 	size_t i;
 
