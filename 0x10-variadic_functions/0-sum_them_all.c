@@ -7,6 +7,7 @@
  * @...: ellipsis a variable number of parameter to calculate the sum of.
  *
  * Return: 0 If n == 0.
+ * otherwise - the sum of all parameters.
  */
 int sum_them_all(const unsigned int n, ...)
 {
